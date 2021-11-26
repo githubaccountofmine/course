@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- https://material.io/resources/icons/?style=baseline -->
+
+    <!-- Weather widget -->
+    <div class="weather">
+        <div class="weather__current">
+            <div class="weather__current__info">
+                <span class="weather__current__city">London</span>
+                <span class="weather__current__label">Weather</span>
+            </div>
+            <div class="weather__current__icon">
+                <i class="wi wi-day-cloudy"></i>
+            </div>
+            <div class="weather__current__info">
+                <span class="weather__current__degrees degrees">14</span>
+                <span class="weather__current__status">Mostly cloudy</span>
+            </div>
+        </div>
+        <div class="weather__forecast">
+            <div class="weather__day">
+                <h6 class="weather__weekday">Thursday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-day-cloudy"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">19</span>
+                    <span class="weather__amplitude_min degrees">10</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Friday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-day-cloudy"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">21</span>
+                    <span class="weather__amplitude_min degrees">12</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Saturday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-day-sunny"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">23</span>
+                    <span class="weather__amplitude_min degrees">14</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Sunday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-cloud"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">25</span>
+                    <span class="weather__amplitude_min degrees">17</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Monday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">27</span>
+                    <span class="weather__amplitude_min degrees">18</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Tuesday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">28</span>
+                    <span class="weather__amplitude_min degrees">17</span>
+                </div>
+            </div>
+            <div class="weather__day">
+                <h6 class="weather__weekday">Wednesday</h6>
+                <div class="weather__icon">
+                    <i class="wi wi-rain"></i>
+                </div>
+                <div class="weather__amplitude">
+                    <span class="weather__amplitude_max degrees">24</span>
+                    <span class="weather__amplitude_min degrees">17</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comparison table -->
+    <div class="pricing">
+        <article>
+            <ul>
+                <li class="bg-purple">
+                    <button>Basic</button>
+                </li>
+                <li class="bg-blue">
+                    <button>Simple Start</button>
+                </li>
+                <li class="bg-blue active">
+                    <button>Essentials</button>
+                </li>
+                <li class="bg-blue">
+                    <button>Plus</button>
+                </li>
+                <li class="bg-blue">
+                    <button>Premium</button>
+                </li>
+            </ul>
+            <h1> Pricing Plan </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="hide"></th>
+                        <th class="bg-purple">Basic</th>
+                        <th class="bg-blue">Standard (Early-Bird*)</th>
+                        <th class="bg-blue default">Standard</th>
+                        <th class="bg-red">Premium (Early-Bird*)</th>
+                        <th class="bg-red">Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="txt-l">Cost</span></td>
+                        <td><span class="txt-top">$</span><span class="txt-l">450</span></td>
+                        <td><span class="txt-top">$</span><span class="txt-l">530</span></td>
+                        <td><span class="txt-top">$</span><span class="txt-l">600</span></td>
+                        <td><span class="txt-top">$</span><span class="txt-l">680</span></td>
+                        <td><span class="txt-top">$</span><span class="txt-l">750</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="sep">Booth Details</td>
+
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td><span>End of the hall</span></td>
+                        <td><span>Standard</span></td>
+                        <td><span>Standard</span></td>
+                        <td><span>Standard</span></td>
+                        <td><span>Standard</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Logo Spot</td>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Posters Spot</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>External Links Spot</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Company Information Spot</td>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Documents/Images Spot</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Videos Spot</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    </tr>
+                    <tr>
+
+                        <td colspan="6" class="sep">Other Features</td>
+                    </tr>
+                    <tr>
+                        <td>Online 24/7</td>
+                        <td><span class="tick">&#10004;</span></td>
+                        <td><span class="tick">&#10004;</span></td>
+                        <td class="default"><span class="tick">&#10004;</span></td>
+                        <td><span class="tick">&#10004;</span></td>
+                        <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+
+                        <td>Company Chat Room</td>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Post-Event Analysis and Report</td>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        <td><span class="tick">&#10004;</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <br /><br /><br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th colspan="4" class="bg-green">Sponsor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><span class="txt-l">Cost</span></td>
+                    <td colspan="4"><span class="txt-top">$</span><span class="txt-l">XXXX</span></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" class="sep">Exclusives</td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">Expo Lobby advertisement Spot</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Expo Landing Website advertisement Spot</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="sep">Booth Details</td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">Location</td>
+                    <td colspan="4"><span>Beginning of hall</span></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Logo Spot</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                </tr>
+                <tr>
+                    <td colspan="2">Posters Spot</td>
+                    <td colspan="4">5</td>
+                </tr>
+                <tr>
+                    <td colspan="2">External Links Spot</td>
+                    <td colspan="4">9</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Company Information Spot</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                </tr>
+                <tr>
+                    <td colspan="2">Documents/Images Spot</td>
+                    <td colspan="4">Unlimited</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Videos Spot</td>
+                    <td colspan="4">Unlimited</td>
+                </tr>
+                </tr>
+                <tr>
+
+                    <td colspan="2" class="sep">Other Features</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Online 24/7</td>
+                    <td colspan="4"><span class="tick">&#10004;</span></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">Company Chat Room</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Post-Event Analysis and Report</td>
+                    <td colspan="4"><span class="tick">&#10004;</span>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <p class="txt-2"> <b>Note –</b> Each booth type has a limited number of spots available, and will be given out
+            on a first-come, first-serve basis </p>
+        <p class="txt-2"> <b>*</b>Early-Bird promotion will only be available until XX/XX/2019 </p> -->
+
+        </article>
+    </div>
+    <!-- Adaptive Calendar -->
+    <div class="calendar">
+        <div class="container">
+            <div class="row">
+                <h1>Calendar of Events</h1>
+            </div>
+            <div class="row col-2">
+                <aside class="eventKey">
+                    <h2>Event Key</h2>
+                    <div class="tradeShow">Trade Show</div>
+                    <div class="holiday">Holiday</div>
+                    <div class="meeting">Meeting</div>
+                    <div class="birthday">Birthday</div>
+                </aside>
+                <article>
+                    <h3 class="monthYear"><span>,</span> July 2014 </h3>
+                    <ul class="days">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tues</li>
+                        <li>Wed</li>
+                        <li>Thurs</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+                    <ul class="dates">
+                        <li class="fade"><span class="date">29</span></li>
+                        <li class="fade"><span class="date">30</span></li>
+                        <li><span class="date">1</span></li>
+                        <li>
+                            <section class="dateWrapper">
+                                <span class="date">2</span>
+                                <div class="multidayHolder"><a href="#"
+                                        class="multidayEvent tradeShow length-2">Independence Tade Show <span>2 -
+                                            3</span></a></div>
+                            </section>
+                        </li>
+                        <li class="current today">
+                            <section class="dateWrapper">
+                                <span class="date">3</span>
+                                <div class="multidayHolder"><a href="#"
+                                        class="multidayEvent tradeShow secondaryDay">Independence Trade Show <span>2 -
+                                            3</span></a></div>
+                                <a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a>
+                                <a href="#" class="meeting"><b>4:30 PM</b> Trade Show Wrap Meeting</a>
+                                <a href="#" class="expand"><span> + </span></a>
+                            </section>
+                        </li>
+                        <li><span class="date">4</span>
+                            <a href="#" class="holiday">U.S. Independence Day <span>4th of July</span></a>
+                        </li>
+                        <li><span class="date">5</span></li>
+                        <li><span class="date">6</span></li>
+                        <li><span class="date">7</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">8</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">9</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">10</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">11</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">12</span></li>
+                        <li><span class="date">13</span></li>
+                        <li><span class="date">14</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">15</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li>
+                            <span class="date">16</span>
+                            <div class="multidayHolder"><a href="#" class="multidayEvent tradeShow length-3">Trade Show
+                                    <span>16 - 18</span></a></div> <a href="#" class="meeting"><b>8:30 AM</b> Daily Stand
+                                Up</a>
+                        </li>
+                        <li>
+                            <span class="date">17</span>
+                            <div class="multidayHolder"><a href="#" class="multidayEvent tradeShow secondaryDay">Trade Show
+                                    <span>16 - 18</span></a></div> <a href="#" class="meeting"><b>8:30 AM</b> Daily Stand
+                                Up</a>
+                        </li>
+                        <li>
+                            <span class="date">18</span>
+                            <div class="multidayHolder"><a href="#" class="multidayEvent tradeShow secondaryDay">Trade Show
+                                    <span>16 - 18</span></a></div> <a href="#" class="meeting"><b>8:30 AM</b> Daily Stand
+                                Up</a>
+                        </li>
+                        <li>
+                            <span class="date">19</span>
+                            <a href="http://amzn.com/w/HOLLMHU0B93L" target="_blank" class="birthday"><b>Jacob's
+                                    Birthday</b> Buy him a gift!</a>
+                        </li>
+                        <li><span class="date">20</span></li>
+                        <li><span class="date">21</span> <a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">22</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">23</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">24</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">25</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">26</span></li>
+                        <li><span class="date">27</span></li>
+                        <li><span class="date">28</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">29</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">30</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li><span class="date">31</span><a href="#" class="meeting"><b>8:30 AM</b> Daily Stand Up</a></li>
+                        <li class="fade"><span class="date">1</span></li>
+                        <li class="fade"><span class="date">2</span></li>
+                    </ul>
+                    <div class="calendarNav">
+                        <a href="#prevDay" class="prevDay">Previous Day</a>
+                        <a href="#today" class="today">Current Day</a>
+                        <a href="#" class="nextDay">Next Day</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tree list -->
+
+    <!-- WYSIWYG Editor -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

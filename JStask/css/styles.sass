@@ -1,0 +1,129 @@
+.placeholder 
+    height: 500px
+    width: 500px
+    background: #999
+.container 
+    position: relative
+    width: 100vw
+.ranger 
+    position: sticky
+    top: 0
+    left: calc(50% - 120px)
+    width: 240px
+
+@function makelongshadow($color, $size)
+  $val: 5px 0 0 $size $color
+  
+  @for $i from 6 through 1000 
+    $val: #{$val}, #{$i}px 0 0 $size #{$color}
+  
+  @return $val
+
+
+input 
+  align-items: center
+  -webkit-appearance: none
+     -moz-appearance: none
+          appearance: none
+  background: none
+  cursor: pointer
+  display: flex
+  height: 100%
+  min-height: 50px
+  overflow: hidden
+  width: 240px
+
+input:focus 
+  box-shadow: none
+  outline: none
+
+input::-webkit-slider-runnable-track 
+  background: #e33d44
+  content: ""
+  height: 2px
+  pointer-events: none
+
+input::-webkit-slider-thumb 
+  height: 18px
+  width: 28px
+  -webkit-appearance: none
+          appearance: none
+  background: #000
+  border-radius: 8px
+  box-shadow: makelongshadow(#0000ff, -8px)
+  margin-top: -8px
+  border: 1px solid #777
+
+input::-moz-range-track 
+  width: 240px
+  height: 2px
+
+input::-moz-range-thumb 
+  height: 18px
+  width: 28px
+  background: #fff
+  border-radius: 8px
+  border: 1px solid #777
+  position: relative
+
+input::-moz-range-progress 
+  height: 2px
+  background: #e33d44
+  border: 0
+  margin-top: 0
+
+input::-ms-track 
+  background: transparent
+  border: 0
+  border-color: transparent
+  border-radius: 0
+  border-width: 0
+  color: transparent
+  height: 2px
+  margin-top: 10px
+  width: 240px
+
+input::-ms-thumb 
+  height: 18px
+  width: 28px
+  background: #fff
+  border-radius: 8px
+  border: 1px solid #777
+
+input::-ms-fill-lower 
+  background: #e33d44
+  border-radius: 0
+
+input::-ms-fill-upper 
+  background: #c7c7c7
+  border-radius: 0
+
+input::-ms-tooltip 
+  display: none
+
+.image 
+    max-height: 100%
+    max-width: 100%
+.threshold
+    height: 750px
+    background-image: linear-gradient(red, yellow); 
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 40px
+    font-weight: bold
+    font-family: Arial
+    color: white
+
+
+.beers 
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+.beer 
+    width: 200px
+    height: 200px
+    &__img
+        max-width: 100%
+        max-height: 100%

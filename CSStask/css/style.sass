@@ -1,0 +1,504 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    outline: 0
+
+body
+    font-family: 'Open Sans', sans-serif
+    font-size: 14px
+    padding: 14px
+
+ul
+    list-style: none
+
+.weather
+    background-color: #fec84a
+    display: flex
+    width: fit-content //questionable
+    @media (max-width: 768px)
+        flex-flow: column nowrap
+    &__current
+        display: flex
+        justify-content: space-evenly
+        &__city
+            text-transform: uppercase
+            font-weight: 700
+        &__label
+            text-transform: uppercase
+        &__info
+            text-align: center
+            display: flex
+            flex-flow: column nowrap
+            padding: 20px
+            justify-content: center
+        &__degrees
+            font-size: 2em
+        &__icon
+            padding: 20px
+            font-size: 1.5em
+            > i
+                font-size: 3em
+                padding-top: 5px
+    &__amplitude
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        > span
+            padding: 0 4px
+        &_max
+            color: green
+        &_min
+            color: darkred
+        @media (max-width: 1279px)
+            flex-flow: column nowrap
+
+    &__forecast
+        display: flex
+    &__icon
+        padding: 10px
+        font-size: 1.5em
+    &__day
+        text-align: center
+        padding: 10px
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        @media (max-width: 768px)
+            margin: 0 10px
+    &__weekday
+        margin: 0
+        font-size: 12px
+        font-weight: 400
+
+.degrees
+    &::after
+        content: '°C'
+
+.pricing
+    article
+        width: 100%
+        max-width: 1000px
+        margin: 0 auto
+        height: 1000px
+        position: relative
+
+    ul
+        display: flex
+        top: 0px
+        z-index: 10
+        padding-bottom: 14px
+
+    li
+        list-style: none
+        flex: 1
+
+    li:last-child
+        border-right: 1px solid #DDD
+
+    button
+        width: 100%
+        border: 1px solid #DDD
+        border-right: 0
+        border-top: 0
+        padding: 10px
+        background: #FFF
+        font-size: 14px
+        font-weight: bold
+        height: 60px
+        color: #999
+
+    li.active button
+        background: #F5F5F5
+        color: #000
+
+    table
+        border-collapse: collapse
+        table-layout: fixed
+        width: 100%
+    th
+        background: #F5F5F5
+        display: none
+    td, th
+        height: 53px
+
+    td,th
+        border: 1px solid #DDD
+        padding: 10px
+        empty-cells: show
+    td,th
+        text-align: left
+
+    td+td, th+th 
+        text-align: center
+        display: none
+
+    td.default
+        display: table-cell
+
+    .bg-purple
+        border-top: 3px solid #A32362
+
+    .bg-red
+        border-top: 3px solid #fc4903
+
+    .bg-blue
+        border-top: 3px solid #0097CF
+
+    .bg-green
+        border-top: 3px solid green
+
+    .sep
+        background: #F5F5F5
+        font-weight: bold
+
+    h1
+        font-size: 48px
+        text-align: center
+        margin: 30px 0
+    .txt-l
+        font-size: 28px
+        font-weight: bold
+    .txt-2
+        font-size: 18px
+        margin: 10px 0
+    .txt-top
+        position: relative
+        top: -9px
+        left: -2px
+    .tick
+        font-size: 18px
+        color: #2CA01C
+    .hide
+        border: 0
+        background: none
+
+.calendar
+    background: #ebebeb
+    text-align: center
+    h1 
+        font-size: 32px
+        font-weight: 100
+        margin-bottom: 16px
+        margin: 20px 0 40px
+    h2 
+        font-size: 14px
+        font-weight: 100
+        margin-bottom: 8px
+        margin-top: 5px
+    h3 
+        font-size: 21px
+    .container 
+        max-width: 900px
+        margin: 0 auto
+        text-align: left
+        padding: 0 20px
+    .row 
+        clear: both
+        &:after 
+            conttent: ' '
+            display: block
+            clear: both
+
+    .col-2 
+        aside 
+            width: 20%
+            float: left
+
+        article 
+            width: 80%
+            float: left
+
+    .eventKey div 
+        display: inline-block
+        padding: 4px
+        margin: 4px 4px 4px 0
+        float: left
+        clear: both
+
+    .monthYear 
+        margin: 0px 0 10px 0
+        padding: 0 0 0 8px
+        span 
+            display: none
+
+    .days li 
+        color: #333
+        border-bottom: 1px solid #ccc
+        padding: 4px 4px 4px 8px
+        text-transform: uppercase
+        font-size: 13px
+        float: left
+        width: 14.28%
+        position: relative
+        box-sizing: border-box
+
+    .dates 
+        border-right: 1px solid #ccc
+        li 
+            float: left
+            width: 14.28%
+            position: relative
+            box-sizing: border-box
+        &:after 
+            content: ''
+            display: block
+            clear: both
+
+    .days:after 
+        content: ''
+        display: block
+        clear: both
+
+    .dates li 
+        border: 1px solid #ccc
+        border-width: 0 0 1px 1px
+        height: 90px
+        margin: 0
+        background: #fff
+
+    .dateWrapper 
+        max-height: 90px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        transition: max-height 1s
+        &.open 
+            max-height: 600px
+            z-index: 10
+            padding-bottom: 25px
+            background: #fff
+            border-bottom: 1px solid #ccc
+            box-shadow: 0 0 10px #333
+
+    .dates li.fade 
+        color: #ccc
+        opacity: 0.6
+
+    .date 
+        display: block
+        padding: 4px
+        text-align: right
+        font-size: 13px
+
+    .dates li a 
+        display: block
+        padding: 4px
+        text-align: right
+        font-size: 13px
+        text-align: left
+        text-decoration: none
+        font-size: 12px
+        color: #fff
+        border-radius: 2px
+
+    .eventKey div 
+        text-align: left
+        text-decoration: none
+        font-size: 12px
+        color: #fff
+        border-radius: 2px
+
+    .dates li
+        a, div 
+            margin: 8px 2px 0
+        a
+            &.expand 
+                display: block
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.5) 100%)
+                position: absolute
+                bottom: 0px
+                left: 0
+                width: 100%
+                text-align: left
+                padding: 4px 0 0 0
+                margin: 0
+                border-radius: 0
+                span 
+                    display: inline-block
+                    float: right
+                    padding: 4px 8px
+                    transition: transform 1s ease-in-out
+                &.open span 
+                    transform: rotate(45deg)
+                    color: #333
+            b 
+            font-weight: bold
+
+    .multidayHolder 
+        position: relative
+        height: 20px
+        padding: 0
+        margin: 4px 0 0 0
+
+    .dates li a.multidayEvent 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 100
+        display: none
+        margin: 0
+
+    .multidayEvent span, .holiday span
+        display: none
+
+    .dates li a
+        &.length-2 
+            width: 196%
+            display: block
+
+        &.length-3
+            width: 301%
+            display: block
+
+    .tradeShow
+        background: #e86542
+        color: #fff
+        &:before 
+            background: #e86542
+            color: #fff
+
+    .meeting
+        background: #0359a6
+        color: #fff
+        &:before
+            background: #0359a6
+            color: #fff
+
+    .holiday
+        background: #5fa8aa
+        color: #fff
+        &:before
+            background: #5fa8aa
+            color: #fff
+
+    .birthday
+        background: #f8a805
+        color: #fff
+        &:before
+            background: #f8a805
+            color: #fff
+
+    .calendarNav
+        display: none
+
+    @media (max-width: 768px) 
+        background: #fff
+
+        .col-2
+            aside, article 
+                width: 100%
+                float: none
+                clear: both
+
+        .eventKey div 
+            clear: none
+
+        .monthYear
+            padding: 20px 0 20px 23px
+            margin: 0
+            border-bottom: 1px solid #ccc
+            span
+                display: inline
+
+        .days
+            display: none
+
+        .dates li
+            display: none
+            a.expand
+                display: none
+            &.current, a.multidayEvent
+                display: block
+                position: static
+                width: auto
+
+        .calendarNav
+            display: block
+            position: static
+            width: auto
+
+        .multidayHolder
+            height: auto
+
+        .dates
+            border: none
+
+            li.current
+                width: 100%
+                height: auto
+                border: none
+                position: relative
+                display: block
+
+        .dateWrapper
+            width: 100%
+            height: auto
+            position: static
+            max-height: 1000px
+
+        .date
+            text-align: left
+            position: absolute
+            top: -48px
+            left: 0px
+            font-size: 21px
+
+        .multidayEvent span, .holiday span
+            position: static
+            margin-top: 4px
+            color: #999
+            display: block
+            text-align: left
+
+        .dates li a 
+            background: none
+            color: #333
+            position: relative
+            font-size: 14px
+            padding: 25px 0 25px 35px
+            margin: 5px 0
+            border-bottom: 1px solid #ccc
+            min-height: 45px
+            &:before 
+                content: ''
+                display: block
+                width: 17px
+                height: 17px
+                border-radius: 17px
+                position: absolute
+                top: 30%
+                left: 0
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 42%
+                right: 20px
+                border: 1px solid #ccc
+                border-width: 1px 1px 0 0
+                width: 15px
+                height: 15px
+                transform: rotate(45deg)
+            b
+                display: block
+                margin-bottom: 4px
+
+        .calendarNav
+            padding: 20px 0
+            text-align: center
+
+            a 
+                clear: both
+                display: inline-block
+                color: #333
+                text-decoration: none
+                padding: 6px 10px
+                border-radius: 4px
+                background: #d6d6d6
+                border: 1px solid #999
+                border-width: 0 1px 1px 0
+                margin-right: 6px
+                font-size: 14px
+

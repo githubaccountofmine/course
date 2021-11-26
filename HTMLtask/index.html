@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal__wrapper">
+        <div class="modal__window">
+            <div class="modal__window__header">
+                <h4>Confirmation</h4>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="modal__window__body">
+                <i class="fa fa-warning"></i>&nbsp;Are you sure you want to proceed?
+            </div>
+            <div class="modal__window__options">
+                <button class="button button_blue" onclick="toggleModal()"><i class="fa fa-check"></i>&nbsp;Yes</button>
+                <button class="button button_blue" onclick="toggleModal()"><i class="fa fa-times"></i>&nbsp;No</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- InputGroup -->
+        <div class="block">
+            <h3> Left addon </h3>
+            <hr>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup__addon"><i class="fa fa-user"></i></span>
+                <label class="ui-inputgroup__label">
+                    <input type="text" class="ui-inputgroup__input" placeholder="Username">
+                </label>
+            </div>
+        </div>
+
+        <!-- left and right addons -->
+        <div class="block">
+            <h3> Left and right addons </h3>
+            <hr>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup__addon">$</span>
+                <label class="ui-inputgroup__label">
+                    <input type="text" class="ui-inputgroup__input" placeholder="Price">
+                </label>
+                <span class="ui-inputgroup__addon">.00</span>
+            </div>
+        </div>
+
+        <!-- multiple addons -->
+        <div class="block">
+            <h3> Multiple addons </h3>
+            <hr>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup__addon"><i class="fa fa-credit-card"></i></span>
+                <span class="ui-inputgroup__addon"><i class="fa fa-cc-visa"></i></span>
+                <label class="ui-inputgroup__label">
+                    <input type="text" class="ui-inputgroup__input" placeholder="Price">
+                </label>
+                <span class="ui-inputgroup__addon">$</span>
+                <span class="ui-inputgroup__addon">.00</span>
+            </div>
+        </div>
+
+        <!-- Buttons (Check BEM for styles) -->
+        <div class="block">
+            <h3> Buttons addon </h3>
+            <hr>
+            <div class="ui-buttongroup">
+                <button class="button button_blue">Primary</button>
+                <button class="button button_gray">Secondary</button>
+                <button class="button button_green">Success</button>
+                <button class="button button_blue">Info</button>
+                <button class="button button_yellow">Warning</button>
+                <button class="button button_red">Danger</button>
+            </div>
+        </div>
+
+        <!-- Blue buttons -->
+        <div class="block">
+            <h3> Blue buttons</h3>
+            <hr>
+            <div class="ui-buttongroup">
+                <button class="button button_blue">Click</button>
+                <button class="button button_blue"><i class="fa fa-check"></i>&nbsp;Click</button>
+                <button class="button button_blue">Click&nbsp;<i class="fa fa-check"></i></button>
+                <button class="button button_blue"><i class="fa fa-check"></i></button>
+                <button class="button button_blue" disabled><i class="fa fa-check"></i>&nbsp;Disabled</button>
+            </div>
+        </div>
+
+        <!-- Rounded buttons -->
+        <div class="block">
+            <h3> Rounded buttons </h3>
+            <hr>
+            <div class="ui-buttongroup">
+                <button class="button button_blue button_rounded">Primary</button>
+                <button class="button button_gray button_rounded">Secondary</button>
+                <button class="button button_green button_rounded">Success</button>
+                <button class="button button_blue button_rounded">Info</button>
+                <button class="button button_yellow button_rounded">Warning</button>
+                <button class="button button_red button_rounded">Danger</button>
+            </div>
+        </div>
+        <!-- Dropdown -->
+        <div class="block">
+            <h3> Dropdown </h3>
+            <hr>
+            <div class="container">
+                <select id="car" name="car" data-dropdown>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Dropdown with filter -->
+        <div class="block">
+            <h3> Dropdown with filter </h3>
+            <hr>
+            <div class="container">
+                <form class="form">
+                    <div class="form__group">
+                        <label for="cars">Cars</label>
+                        <select id="car" name="car" data-dropdown data-filter="true">
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Honda">Honda</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dropdown with filter and multiple select
+    ********
+    ********
+    BROKEN
+    ********
+    ********
+    -->
+        <div class="block">
+            <h3> Dropdown with filter and multiple select </h3>
+            <hr>
+            <div class="container">
+                <form class="form">
+                    <div class="form__group">
+                        <label for="cars">Cars</label>
+                        <select id="car" name="car" data-dropdown data-filter data-multiple>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Honda">Honda</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Radio Button -->
+        <div class="block">
+            <h3> Radio Buttons </h3>
+            <hr>
+            <div class="ui-radiogroup">
+                <label class="ui-radiogroup__label">
+                    <input type="radio" class="ui-radiogroup__input" name="radiogroup" value="Option 1"> Option
+                    1</input>
+                    <span class="ui-radiogroup__checkmark"></span>
+                </label>
+                <label class="ui-radiogroup__label">
+                    <input type="radio" class="ui-radiogroup__input" name="radiogroup" value="Option 2"> Option
+                    2</input>
+                    <span class="ui-radiogroup__checkmark"></span>
+                </label>
+                <label class="ui-radiogroup__label">
+                    <input type="radio" class="ui-radiogroup__input" name="radiogroup" value="Option 3"> Option
+                    3</input>
+                    <span class="ui-radiogroup__checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="block">
+            <h3> Checkboxes </h3>
+            <hr>
+            <div class="ui-checkboxgroup">
+                <label class="ui-checkboxgroup__label">
+                    <input type="checkbox" class="ui-checkboxgroup__input" value="Technology">Technology</input>
+                    <span class="ui-checkboxgroup__checkmark"></span>
+                </label>
+                <label class="ui-checkboxgroup__label">
+                    <input type="checkbox" class="ui-checkboxgroup__input" value="Finance">Finance</input>
+                    <span class="ui-checkboxgroup__checkmark"></span>
+                </label>
+                <label class="ui-checkboxgroup__label">
+                    <input type="checkbox" class="ui-checkboxgroup__input" value="Sports">Sports</input>
+                    <span class="ui-checkboxgroup__checkmark"></span>
+                </label>
+                <label class="ui-checkboxgroup__label">
+                    <input type="checkbox" class="ui-checkboxgroup__input" value="Entertainment">Entertainment</input>
+                    <span class="ui-checkboxgroup__checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Input Switch -->
+        <div class="block">
+            <h3> Input Switch </h3>
+            <hr>
+            <div class="ui-inputswitch">
+                <label class="ui-inputswitch__label">
+                    <input type="checkbox" class="ui-inputswitch__input" name="inputswitch" value="Option 1">
+                    <span class="ui-inputswitch__checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Input Mask for phone-->
+        <div class="block">
+            <h3> Input mask for phone number </h3>
+            <hr>
+            <div class="ui-inputgroup">
+                <label class="ui-inputgroup__label">
+                    <input type="text" class="ui-inputgroup__input" value="(___) ___-____" data-mask="(___) ___-____" />
+                </label>
+            </div>
+        </div>
+
+        <!-- New tree -->
+        <div class="block">
+            <h3> Tree </h3>
+            <hr>
+            <div class="tree">
+                <div class="tree__root">
+                    <div class="tree__parent">
+                        <input type="checkbox" class="tree__check" id="folder1">
+                        <div class="tree__labelwrapper">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            <label for="folder1" class="tree__label">Documents</label>
+                        </div>
+                    </div>
+                    <div class="tree_children">
+                        <div class="tree__child">
+                            <input type="checkbox" class="tree__check" id="folder1_file1">
+                            <div class="tree__labelwrapper">
+                                <i class="fa fa-file-text"></i>
+                                &nbsp;
+                                <label for="folder1_file1" class="tree__label">document.docx</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree__root">
+                    <div class="tree__parent">
+                        <input type="checkbox" class="tree__check" id="folder2">
+                        <div class="tree__labelwrapper">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            <label for="folder2" class="tree__label">Pictures</label>
+                        </div>
+                    </div>
+                    <div class="tree__children">
+                        <div class="tree__child">
+                            <input type="checkbox" class="tree__check" id="folder2_file1">
+                            <div class="tree__labelwrapper">
+                                <i class="fa fa-file-photo-o"></i>
+                                &nbsp;
+                                <label for="folder2_file1" class="tree__label">barcelona.jpg</label>
+                            </div>
+                        </div>
+                        <div class="tree__child">
+                            <input type="checkbox" class="tree__check" id="folder2_file2">
+                            <div class="tree__labelwrapper">
+                                <i class="fa fa-file-photo-o"></i>
+                                &nbsp;
+                                <label for="folder2_file2" class="tree__label">rome.jpg</label>
+                            </div>
+                        </div>
+                        <div class="tree__child">
+                            <input type="checkbox" class="tree__check" id="folder2_file3">
+                            <div class="tree__labelwrapper">
+                                <i class="fa fa-file-photo-o"></i>
+                                &nbsp;
+                                <label for="folder2_file3" class="tree__label">paris.jpg</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm Dialog -->
+        <div class="block">
+            <h3> Confirm Dialog </h3>
+            <hr>
+            <button class="button button_blue" onclick="toggleModal()">Trigger Modal</button>
+        </div>
+
+        <!-- File upload -->
+        <div class="block">
+            <h3> File upload </h3>
+            <hr>
+            <div>
+                <div class="uploader">
+                    <form action="/">
+                        <div class="uploader__container">
+                            <input class="uploader__input" id="my-file" type="file" accept="image/png, image/jpeg">
+                            <label tabindex="0" for="my-file" class="button button_blue" id="file-upload-button"><i
+                                    class="fa fa-plus"></i>&nbsp;Choose</label>
+                            <button class="button button_blue" type="submit"><i
+                                    class="fa fa-upload"></i>&nbsp;Upload</button>
+                            <button class="button button_red" onclick="dropFiles()" type="reset"><i
+                                    class="fa fa-times"></i>&nbsp;Cancel</button>
+                        </div>
+                    </form>
+                    <div class="uploader__list">
+                        <div class="uploader__list__item" id="file-placeholder">No uploaded files</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drag and drop -->
+        <div class="block">
+            <h3> Drag and drop </h3>
+            <hr>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>
